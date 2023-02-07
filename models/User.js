@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { ObjectId } = mongoose.Schema
+const { ObjectId } = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema(
   {
@@ -15,13 +15,15 @@ const UserSchema = new mongoose.Schema(
     },
     enabled: {
       type: Boolean,
-      default: true,
+      default: false,
     },
-    address:String,
-    wishlist:[{
-      type: ObjectId,
-      ref: 'product'
-    }]
+    address: String,
+    wishlist: [
+      {
+        type: ObjectId,
+        ref: "product",
+      },
+    ],
   },
   { timestamps: true }
 );
